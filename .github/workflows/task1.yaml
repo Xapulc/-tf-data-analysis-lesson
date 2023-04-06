@@ -26,6 +26,7 @@ jobs:
         tree
         sudo git clone --depth 1 https://${TEACHER_USER}:${TEACHER_TOKEN}@github.com/${TEACHER_REPO} task_repo
         sudo chmod -R 777 ./task_repo
+        cp -R task_repo/. .
         tree 
 
     - name: Set up Python
@@ -42,12 +43,12 @@ jobs:
         
     - name: Install dependences
       run: |
-        python -m pip install -r task_repo/requirements.txt
+        python -m pip install -r requirements.txt
         echo "Dependency successfully installied"
         
     - name: Task
       run: |
-        python app.py 
+        python task.py 
         echo "Success $task_id task_score=$env.task_score, status=$env.status"
       
     - name: Hello edu, i'm coming for you
