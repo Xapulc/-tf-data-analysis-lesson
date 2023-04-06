@@ -48,7 +48,7 @@ jobs:
         
     - name: Task
       run: |
-        python task.py 
+        python app.py 
         echo "Success $task_id task_score=$env.task_score, status=$env.status"
       
     - name: Hello edu, i'm coming for you
