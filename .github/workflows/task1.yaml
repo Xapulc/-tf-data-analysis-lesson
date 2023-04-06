@@ -42,7 +42,7 @@ jobs:
         
     - name: Install dependences
       run: |
-        python -m pip install -r requirements.txt
+        python -m pip install -r task_repo/requirements.txt
         echo "Dependency successfully installied"
         
     - name: Task
