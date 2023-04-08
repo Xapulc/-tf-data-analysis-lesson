@@ -37,7 +37,7 @@ jobs:
     - name: Clone student repository
       run: |
         tree
-        sudo git clone ${{env.pull_req_url}} student_work
+        sudo git clone `python transform_repo.py ${{env.pull_req_url}}` student_work
         sudo chmod -R 777 ./student_work
         tree 
         
